@@ -232,10 +232,8 @@ ifeq ($(BOARD_HAVE_QCOM_FM),true)
 PRODUCT_PACKAGES += \
     FM2 \
     libqcomfm_jni \
-    qcom.fmradio \
-    qcom.fmradio.xml
-
-PRODUCT_BOOT_JARS += \
+    init.qti.fm.sh
+#PRODUCT_BOOT_JARS += \
     qcom.fmradio
 endif
 
@@ -459,17 +457,15 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     vndk-ext \
-    vndk_package
+    vndk_package \
+    com.android.vndk.current.on_vendor
 
-<<<<<<< HEAD
 # Wifi
-=======
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full-v29.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite-v29.so
 
 # WiFi
->>>>>>> 437ac45e... sdm660-common: Load vndk 29 libprotobuf for libril-qc-hal-qmi and libwhvdil
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
