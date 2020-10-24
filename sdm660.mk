@@ -232,10 +232,9 @@ ifeq ($(BOARD_HAVE_QCOM_FM),true)
 PRODUCT_PACKAGES += \
     FM2 \
     libqcomfm_jni \
-    qcom.fmradio \
-    qcom.fmradio.xml
+    init.qti.fm.sh
 
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
     qcom.fmradio
 endif
 
